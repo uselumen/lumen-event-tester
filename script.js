@@ -45,6 +45,12 @@ const main = () => {
       });
 
       const json = await response.json();
+
+      if (!response.ok) {
+        const error = json?.message || "API connection error";
+        throw Error(error);
+      }
+
       const responseData = json?.data;
 
       console.log({ responseData });
