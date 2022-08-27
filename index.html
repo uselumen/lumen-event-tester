@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumen Event Tester</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <h1>Lumen Event Tester</h1>
+      <p>
+        This is a sample website for emiting events to
+        <a href="https://uselumen.co" target="_blank">Lumen</a>
+      </p>
+    </div>
+
+    <form id="event-form">
+      <div>
+        <input id="customer-id-input" required placeholder="Customer ID" />
+        <input id="event-name-input" required placeholder="Event Name" />
+        <input id="api-key-input" required placeholder="Business API Key" />
+      </div>
+
+      <br />
+
+      <div>
+        <label>
+          <span>Staging</span>
+          <input checked required type="radio" name="environment" />
+        </label>
+        <label>
+          <span>Production</span>
+          <input
+            required
+            type="radio"
+            name="environment"
+            value="production"
+            id="production-environment-input"
+          />
+        </label>
+      </div>
+
+      <br />
+
+      <div>
+        <button>Emit Event</button>
+      </div>
+    </form>
+
+    <br />
+    <p id="result-box"></p>
+
+    <script src="script.js" />
+  </body>
+</html>
